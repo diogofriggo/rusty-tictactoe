@@ -1,3 +1,4 @@
+use colored::*;
 use std::collections::HashMap;
 use std::time::Instant;
 
@@ -13,6 +14,8 @@ fn main() {
     // you then go for the other corner
     // If your second move is instead on the diagonal, you'll end up in a draw
 
+    control::set_virtual_terminal(true).unwrap();
+
     // Uncomment below to play against a random-play opponent
 
     // let mut mechanics = engine::learner_against_random::LearnerAgainstRandom {
@@ -26,13 +29,14 @@ fn main() {
         opponent_state_value: HashMap::with_capacity(160000),
     };
 
+    println!("Learning... this may take a few seconds");
     let start = Instant::now();
     for _ in 0..1_000_000 {
         engine::run(&mut mechanics);
     }
 
     println!(
-        "{:?}s {} {}",
+        "It took {:?} to learn {} {}",
         start.elapsed(),
         mechanics.you_state_value.len(),
         mechanics.opponent_state_value.len()
