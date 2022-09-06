@@ -14,6 +14,8 @@ when should the machine use what it has already learned vs when should it risk a
 
 I've found best results with an exploration rate of 30% and a decay rate of 90%. Also the learning rate has been set to 40% so that the machine doesn't hold on too strongly to recent memories
 
-Go play! You have to wait around a minute before the game starts, in that time the machine is playing thousands of times against itself, balancing exploration against explotation.
+If you're on windows just launch tictactoe.exe and go play! If you're on another platform just compile the code with the latest rust toolchain before playing.
+
+You have to wait around a minute before the game starts, in that time the machine is playing thousands of times against itself, balancing exploration against explotation.
 
 Once learning is done the machine switches to full-greedy mode to beat you!
