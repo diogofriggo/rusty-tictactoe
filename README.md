@@ -9,7 +9,7 @@ As part of my masters in theoretical physics, I've coded in Rust an ML model to 
 After thousands of iterations playing with itself the machine becomes a perfect player and you as a human can never win,
 you can only get to a draw at best!
 
-I'v written this to experiment with the balance between exploitation vs exploration, that is,
+I've written this to experiment with the balance between exploitation vs exploration, that is,
 when should the machine use what it has already learned vs when should it risk a new move and perhaps discover a better path to winning.
 
 I've found best results with an exploration rate of 30% and a decay rate of 90%. Also the learning rate has been set to 40% so that the machine doesn't hold on too strongly to recent memories
